@@ -23,7 +23,7 @@ The user is guided to avoid glare, blurred images, bad lighting conditions, fing
 
 In the results, you can get a cropped, perspective-corrected image of the document, along with the original frame. Those can be processed by your app in any way required. The SDK is lightweight and can be easily integrated into your mobile app and blend in your design.
 
-**For maximum performance and full access to all features, it’s best to go with one of our native SDKs (for [iOS](https://github.com/BlinkID/capture-ios) and [Android](https://github.com/BlinkID/capture-android)).**
+**For maximum performance and full access to all features, it’s best to go with one of our native SDKs (for [iOS](https://github.com/microblink/capture-ios) and [Android](https://github.com/microblink/capture-android)).**
 
 # Table of contents
 - [Requirements](#requirements)
@@ -38,7 +38,7 @@ In the results, you can get a cropped, perspective-corrected image of the docume
 
 ## <a name="requirements"></a> Requirements
 The Capture Flutter plugin is built with Flutter v3.24.2.
-All of the versions and dependencies of the `capture_flutter` plugin can be viewed in the [pubsec.yaml](https://github.com/BlinkID/capture-flutter/blob/main/Capture/pubspec.yaml) file.
+All of the versions and dependencies of the `capture_flutter` plugin can be viewed in the [pubsec.yaml](https://github.com/microblink/capture-flutter/blob/main/Capture/pubspec.yaml) file.
 
 The plugin has requirements on the native iOS & Android end, which can be viewed here:
 
@@ -47,7 +47,7 @@ The plugin has requirements on the native iOS & Android end, which can be viewed
 | OS/API version     | iOS 13.0 and newer     | API version 21 and newer     |
 | Camera quality     | At least 1080p         | At least 1080p               |
 
-For more detailed information about the device requirements, see the native documentation here for [iOS](https://github.com/BlinkID/capture-ios?tab=readme-ov-file#-requirements) and [Android](https://github.com/BlinkID/capture-android?tab=readme-ov-file#-device-requirements).
+For more detailed information about the device requirements, see the native documentation here for [iOS](https://github.com/microblink/capture-ios?tab=readme-ov-file#-requirements) and [Android](https://github.com/microblink/capture-android?tab=readme-ov-file#-device-requirements).
 
 ## <a name="quickstart-with-the-sample-application"></a> Quickstart with the sample application
 The sample application demonstrates how the Capture SDK is implemented and used and how to obtain the captured results.
@@ -55,7 +55,7 @@ The sample application demonstrates how the Capture SDK is implemented and used 
 To run it follow the steps:
 1. Git clone the repository:
 ```bash
-git clone https://github.com/BlinkID/capture-flutter.git
+git clone https://github.com/microblink/capture-flutter.git
 ```
 2. Position to the obtained Capture folder and run the `initCaptureFlutterSample.sh` script:
 ```bash
@@ -131,7 +131,7 @@ if (results?.completenessStatus == CompletenessStatus.Complete) {
 }
 ```
 
-- The whole integration process can be found in the sample app `main.dart` file [here](https://github.com/BlinkID/capture-flutter/blob/main/sample_files/main.dart).
+- The whole integration process can be found in the sample app `main.dart` file [here](https://github.com/microblink/capture-flutter/blob/main/sample_files/main.dart).
 - The settings results that can be used with the Capture plugin can be found in the paragraphs below, but also in the comments of each result in the Dart files.
 
 ## <a name="platform-specifics"></a> Platform specifics
@@ -140,32 +140,32 @@ Plugin implementation is located in the `lib` folder, while platform-specific im
 ### <a name="capture-settings"></a> Capture Settings
 With the `CaptureSettings` class, Capture's `AnalyzerSettings`, `UxSettings` and `CameraSettings` can be modified.
 
-The [capture_settings.dart](https://github.com/BlinkID/capture-flutter/blob/main/Capture/lib/capture_settings.dart) file contains all the settings that can be modified and explains what each setting does.
+The [capture_settings.dart](https://github.com/microblink/capture-flutter/blob/main/Capture/lib/capture_settings.dart) file contains all the settings that can be modified and explains what each setting does.
 
 The native implementation of the `CaptureSettings` can be found here:
 - iOS:
-  - [Capture Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L72)
-  - [Analyzer Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L88)
-  - [UX Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L143)
-  - [Camera Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L168)
+  - [Capture Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L72)
+  - [Analyzer Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L88)
+  - [UX Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L143)
+  - [Camera Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L168)
 - Android:
-  - [Capture Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L57)
-  - [Analyzer Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L63)
-  - [UX Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L110)
-  - [Camera Settings](https://github.com/BlinkID/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L121)
+  - [Capture Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L57)
+  - [Analyzer Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L63)
+  - [UX Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L110)
+  - [Camera Settings](https://github.com/microblink/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L121)
 
-For a more detailed explanation of the Capture Settings, go to the native documentation here for [iOS](https://blinkid.github.io/capture-ux-sp/documentation/captureux/mbiccapturesettings) and [Android](https://blinkid.github.io/capture-android/capture-ux/com.microblink.capture.settings/-capture-settings/index.html).
+For a more detailed explanation of the Capture Settings, go to the native documentation here for [iOS](https://microblink.github.io/capture-ux-sp/documentation/captureux/mbiccapturesettings) and [Android](https://microblink.github.io/capture-android/capture-ux/com.microblink.capture.settings/-capture-settings/index.html).
 
 ### <a name="analyzer-result"></a> Analyzer Result
 The `AnalyzerResult` class represents the result of the capture process, and it is available after the scanning process finishes.
 
-All of the results that can be obtained, along with the explanation of what each property returns, can be found in the [capture_analyzer_result.dart](https://github.com/BlinkID/capture-flutter/blob/main/Capture/lib/capture_analyzer_result.dart) file.
+All of the results that can be obtained, along with the explanation of what each property returns, can be found in the [capture_analyzer_result.dart](https://github.com/microblink/capture-flutter/blob/main/Capture/lib/capture_analyzer_result.dart) file.
 
 The native implementation of the `AnalyzerResult` can be found here:
-- [iOS](https://github.com/BlinkID/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L11)
-- [Android](https://github.com/BlinkID/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L23)
+- [iOS](https://github.com/microblink/capture-flutter/blob/main/Capture/ios/Classes/CaptureSerializationUtils.swift#L11)
+- [Android](https://github.com/microblink/capture-flutter/blob/main/Capture/android/src/main/kotlin/com/microblink/capture/flutter/CaptureSerializationUtils.kt#L23)
 
-For a more detailed explanation of the Analyzer Result, go to the native documentation here for [iOS](https://blinkid.github.io/capture-core-sp/documentation/capturecore/mbccanalyzerresult) and [Android](https://blinkid.github.io/capture-android/capture-core/com.microblink.capture.result/-analyzer-result/index.html?query=class%20AnalyzerResult).
+For a more detailed explanation of the Analyzer Result, go to the native documentation here for [iOS](https://microblink.github.io/capture-core-sp/documentation/capturecore/mbccanalyzerresult) and [Android](https://microblink.github.io/capture-android/capture-core/com.microblink.capture.result/-analyzer-result/index.html?query=class%20AnalyzerResult).
 
 ## <a name="licensing"></a> Licensing
 A valid license key is required to initialize the Capture plugin. A free trial license key can be requested after registering at [Microblink Developer Hub](https://developer.microblink.com/).
